@@ -1,0 +1,138 @@
+/*
+package GUI;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class EX
+{
+	public static void main(String[] args)
+	{
+		Dimension dim = new Dimension(1000, 600);
+		
+		JFrame frame = new JFrame("Dley's House");
+		frame.setLocation(200, 300);
+		frame.setPreferredSize(dim);
+		
+		JLabel label = new JLabel();
+		label.setText("강재구 교수님 개발프로젝트");
+		label.setOpaque(true);
+		
+		Color color = new Color(0x0000FF);
+		Color color2 = new Color(255, 0, 0);
+		
+		label.setForeground(color);
+		label.setBackground(color2);
+		
+		Font font = new Font("휴먼엑스포", Font.BOLD, 50);
+		label.setFont(font);
+		
+		label.setVerticalAlignment(SwingConstants.BOTTOM);
+		label.setHorizontalAlignment(SwingConstants.RIGHT);
+		
+		frame.add(label);
+		frame.pack();
+		frame.setVisible(true);
+		
+		System.out.println(label.getHorizontalAlignment());
+		System.out.println(label.getVerticalAlignment());
+	}
+}
+*/
+
+/*
+package StaticImport;
+
+import static java.lang.System.out;
+import static java.lang.Thread.MAX_PRIORITY;
+
+public class StaticIM {
+	
+	static int a, b;
+
+	public static void main(String[] args)
+	{
+		int[] arr = {10, 20, 30};
+		try
+		{
+			for(int i =0; i<=2; i++)
+			{
+				out.println("arr["+i+"]:" + arr[i]);
+			}
+		}
+		catch(Exception e)
+		{
+			out.println("에외발생");
+		}
+		finally 
+		{
+			System.out.println("====================================");
+			System.out.println("예외발생 여부와 상관없이 수행됩니다.");  
+		}
+		
+		try
+		{
+			int Jumsu = Integer.parseInt(args[0]);
+			if(Jumsu > 100)
+			{
+				throw new NumberFormatException("점수가 너무 큽니다");
+			}
+		}
+		catch(NumberFormatException e)
+		{
+			out.println("===============================");
+			out.println(e.getMessage() + "예외 발생");
+		}
+		out.println("Hello");
+		out.println(MAX_PRIORITY);
+		func();
+		
+		try
+		{
+			a = Integer.parseInt(args[0]);
+			b = Integer.parseInt(args[1]);
+			method1();
+		}
+		catch(ArithmeticException e)
+		{
+			out.println("ArithmeticException 처리 루틴 :");
+			out.println(e+"예외발생");
+		}
+		catch(NumberFormatException e)
+		{
+			out.println("NumberFormatException 처리 루틴 :");
+			out.println(e + " 예외 발생 ");
+		}
+		catch(Exception e)
+		{
+			out.println("나머지 모든 예외 처리 루틴 :");
+			out.println(e+"예외 발생");
+		}
+		
+	
+
+	}
+	
+	public static void method1() throws NumberFormatException
+	{ 	
+		System.out.println("매개변수로 입력받은 두 개의 값 :");
+		System.out.println(" a = " + a + " b = " + b );
+		System.out.println("==============================");
+		method2();
+	}
+	public static void method2() throws ArithmeticException 
+	{      
+		System.out.println("최종 메소드 예외 발생 문장 수행 전");
+		System.out.println("a를 b로 나눈 몫 = " + (a/b) );
+		System.out.println("최종 메소드 예외 발생 문장 수행 후"); 
+	}
+	
+	static void func()
+	{
+		int i= 0;
+		int j= 1;
+		out.println(i/j);
+	}
+
+}
+*/

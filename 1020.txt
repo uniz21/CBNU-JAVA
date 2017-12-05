@@ -1,0 +1,226 @@
+﻿/*
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Company {
+	public static void main(String[] args) {
+		String result = "";
+		Employee emp = null;
+		Manager mng = null;
+		String empNo = null;
+		String name = null;
+		String part = null;
+		String position = null;
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			System.out.print("사번 입력(예)A1010 : ");
+			empNo = in.readLine();
+			System.out.print("이름 입력(예)박문석 : ");
+			name = in.readLine();
+			System.out.print("부서 입력(예)기획 : ");
+			part = in.readLine();
+			System.out.print("직책 입력(예)사원=1, 대리=2, 과장=3 : ");
+			position = in.readLine();
+		} catch (Exception e) {
+			System.out.println("입력 오류");
+		}
+		if (position.equals("1")) {
+			emp = new Employee(empNo, name, part);
+			result += emp.resultStr();
+		} else {
+			position = (position.equals("2")) ? "대리" : "과장";
+			mng = new Manager(empNo, name, part, position);
+			result += mng.resultStr() + mng.addStr();
+			// result += mng.addStr();
+		}
+		System.out.println(result);
+	}
+}
+*/
+
+/*
+class Employee {
+		private String empNo;
+		private String name;
+		private String part;
+
+		public Employee() {
+		}
+
+		public Employee(String empNo, String name, String part) {
+			this.empNo = empNo;
+			this.name = name;
+			this.part = part;
+		}
+
+		public String getEmpNo() {
+			return empNo;
+		};
+		public String getName() {
+			return name;
+		};
+		public String getPart() {
+			return part;
+		};
+		public void setEmpNo(String empNo) {
+			this.empNo = empNo;
+		};
+		public void setName(String name) {
+			this.name = name;
+		};
+		public void setPart(String part) {
+			this.part = part;
+		};
+
+		public String resultStr() {
+			String result = "";
+
+			result += "»ç¹ø : " + empNo + "\n";
+			result += "ÀÌ¸§ : " + name + "\n";
+			result += "ºÎ¼­ : " + part + "\n";
+
+			return result;
+		}
+}
+*/
+
+
+/*
+interface Inter 
+{
+	public int a=100; 
+	public final int b = 100;
+	public abstract void method1();
+	public void method2();         
+}
+public class InterTest implements Inter
+{
+	public void method1()
+	{
+		System.out.println("추상메소드");
+	}
+	public void method2()
+	{
+		System.out.println("추상메소드");
+	}
+	public static void main(String args[])
+	{
+		InterTest obj = new InterTest();
+		obj.method1();
+		System.out.println("인터페이스에서는 final을 사용하지 않아도 변수는 final");
+		System.out.println("인터페이스에서는 abstract을 사용하지 않아도 메소드는 abstract");
+	}
+}
+
+*/
+
+
+/*
+interface C1 
+{
+	void method1();
+	void method2();
+}
+
+interface C2 
+{
+	void method3();
+}
+
+interface C3 extends C1,C2 
+{
+	void method4();
+}
+ 
+class C implements C3 
+{
+	public void method1() 
+	{
+		System.out.println("method1() 메소드의 구현");
+	}
+	public void method2() 
+	{
+		System.out.println("method2() 메소드의 구현");
+	}
+	public void method3() 
+	{
+		System.out.println("method3() 메소드의 구현");
+	}
+	public void method4() 
+	{
+		System.out.println("method4() 메소드의 구현");
+	}
+}
+
+public class InterfaceInheritance 
+{
+	public static void main(String arg[]) 
+	{
+		C obj = new C();
+	    obj.method1();
+		obj.method2();
+		obj.method3();
+		obj.method4();
+  }
+}
+*/
+
+/*
+public class InterfaceInheritance 
+{
+	public static void main(String arg[]) 
+	{
+		C obj = new C();
+	    obj.method1();
+		obj.method2();
+		obj.method3();
+		obj.method4();
+  }
+}
+
+
+interface starcraft
+{
+	void attack(String s);
+}
+  
+class terran implements starcraft 
+{
+	public void attack(String s) 
+	{
+		System.out.println("Terran의  " + s + "Attack");
+	}
+}
+
+class protoss implements starcraft 
+{
+	public void attack(String s) 
+	{
+		System.out.println("Protoss의  " + s + "Attack");
+	}
+}
+
+class zerg implements starcraft
+{
+	public void attack(String s) 
+	{
+		System.out.println("Zerg의  " + s + "Attack");
+	}
+}
+*/
+
+/*
+class Output 
+{
+	public static void main(String args[]) 
+	{
+		starcraft obj;   
+		obj = new terran();
+ 		obj.attack("마린 ");
+		obj = new protoss();
+		obj.attack("드라곤");
+		obj = new zerg();
+		obj.attack("히드라리스크");
+	}
+}
+*/
